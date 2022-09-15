@@ -1,12 +1,12 @@
 import React from 'react';
-import LoginPage from '../pages/login';
+import LoginPage from '../pages/login/LoginPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import HomePage from '../pages/homePage';
-import CreateAccount from '../pages/createAccount';
-import PerfilPage from '../pages/perfilpage';
-import EditAddress from '../pages/editAddress';
-import EditProfile from '../pages/editProfile';
-import CartPage from '../pages/cartPage';
+import HomePage from '../pages/homePage/HomePage';
+import CreateAccount from '../pages/createAccount/CreateAccount';
+import PerfilPage from '../pages/perfilpage/PerfilPage';
+import EditAddress from '../pages/editAddress/EditAddress';
+import EditProfile from '../pages/editProfile/EditProfile';
+import CartPage from '../pages/cartPage/CartPage';
 
 export default function RouterPage() {
  return (
