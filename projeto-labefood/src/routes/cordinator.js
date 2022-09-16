@@ -20,3 +20,6 @@ export const goToEditProfile = (navigate) => {
 export const goToCart = (navigate) => {
     navigate("/Cart")
 }
+export const goToRestaurantPage = (navigate) => {
+    navigate("/Restaurant")
+}
