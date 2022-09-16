@@ -1,15 +1,20 @@
 import React from "react";
-import { Button, Container, Header, ImageIcon, Title,Text, Input, Subtitle } from "./styled";
+import { Button, Container, Header, Title,Text, Input, Subtitle, ButtonHeader } from "./styled";
 import icon from "../../img/icon.png"
 import { useNavigate } from "react-router-dom";
+import { goToProfile } from "../../routes/cordinator";
+import useForm from "../../hooks/useForm";
 
 
 export const MyAddress = () => {
     const navigate = useNavigate()
+    const [ form, onChange ] = useForm({street:"", number:"", complement:"", neighbourhood:"", city:"", state:""})
    return(
     <>
     <Header>
-        <ImageIcon src={icon}></ImageIcon>
+        <ButtonHeader onClick={ ()=> goToProfile(navigate) }>
+          <img src={icon}></img>
+        </ButtonHeader>
     </Header>
 
     <Container>
@@ -18,22 +23,52 @@ export const MyAddress = () => {
         </Title>
         
     <Subtitle>Logradouro*</Subtitle>
-    <Input placeholder="Logradouro"></Input>
+    <Input 
+    name="Logradouro"
+    type="text"
+    value={form.street}
+    onChange={onChange}
+    placeholder="Logradouro"></Input>
         
     <Subtitle>Número*</Subtitle>
-    <Input placeholder="Número"></Input>
+    <Input
+    name="NÚmero"
+    type="Number"
+    value={form.number}
+    onChange={onChange}
+    placeholder="Número"></Input>
     
     <Subtitle>Complemento*</Subtitle>
-    <Input placeholder="Complemento"></Input>
+    <Input 
+    name="Complemento"
+    type="text"
+    value={form.complement}
+    onChange={onChange}
+    placeholder="Complemento"></Input>
     
     <Subtitle>Bairro*</Subtitle>
-    <Input placeholder="Bairro"></Input>
+    <Input
+    name="Bairro"
+    type="text"
+    value={form.neighbourhood}
+    onChange={onChange}
+    placeholder="Bairro"></Input>
 
     <Subtitle>Cidade*</Subtitle>
-    <Input placeholder="Cidade"></Input>
+    <Input 
+    name="Cidade"
+    type="text"
+    value={form.city}
+    onChange={onChange}
+    placeholder="Cidade"></Input>
 
     <Subtitle>Estado*</Subtitle>
-    <Input placeholder="Estado"></Input>
+    <Input
+    name="Estado"
+    type="text"
+    value={form.state}
+    onChange={onChange}
+    placeholder="Estado"></Input>
     
     <Button>
         <button onClick={() => (navigate)}>Salvar</button>

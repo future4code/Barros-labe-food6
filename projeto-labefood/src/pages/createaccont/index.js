@@ -1,13 +1,21 @@
 import React from "react";
-import { Button, Container, Header, ImageIcon, Title,Text, Input, Subtitle, ImageLogo } from "./styled";
-import rappi4 from "../img/rappi4.jpeg"
-import icon from "../img/icon.png"
+import { Button, Container, Header, Title,Text, Input, Subtitle, ImageLogo, ButtonHeader } from "./styled";
+import rappi4 from "../../img/rappi4.jpeg"
+import icon from "../../img/icon.png"
+import { useNavigate } from "react-router-dom";
+import { goToProfile } from "../../routes/cordinator";
+import useForm from "../../hooks/useForm";
 
 export const CreateAccont = () => {
+    const navigate = useNavigate
+    const [ form, onChange ] = useForm({name:"", email:"", cpf:"", password:""})
+
    return(
     <>
     <Header>
-        <ImageIcon src={icon}></ImageIcon>
+        <ButtonHeader onClick={ ()=> goToProfile(navigate) }>
+        <img src={icon}></img>
+        </ButtonHeader>
     </Header>
 
     <Container>
@@ -17,19 +25,44 @@ export const CreateAccont = () => {
         </Title>
         
     <Subtitle>Nome*</Subtitle>
-    <Input placeholder="Nome"></Input>
+    <Input 
+    name="name"
+    type="text"
+    value={form.name}
+    onChange={onChange}
+    placeholder="Nome"></Input>
     
     <Subtitle>E-mail*</Subtitle>
-    <Input placeholder="E-mail"></Input>
+    <Input
+     name="email"
+     type="email"
+     value={form.email}
+     onChange={onChange}
+     placeholder="E-mail"></Input>
     
     <Subtitle>CPF*</Subtitle>
-    <Input placeholder="CPF"></Input>
+    <Input 
+    name="cpf"
+    type="Number"
+    value={form.cpf}
+    onChange={onChange}
+    placeholder="CPF"></Input>
 
     <Subtitle>Senha*</Subtitle>
-    <Input placeholder="Senha"></Input>
+    <Input 
+    name="password"
+    type="password"
+    value={form.password}
+     onChange={onChange}
+    placeholder="Senha"></Input>
 
     <Subtitle>Confirmar*</Subtitle>
-    <Input placeholder="Confirmar"></Input>
+    <Input 
+    name="password"
+    type="password"
+    value={form.password}
+     onChange={onChange}
+    placeholder="Confirmar"></Input>
     
     <Button>
         <button onClick={() => (navigate)}>Criar</button>
@@ -38,4 +71,5 @@ export const CreateAccont = () => {
     </>
    )
 }
+
 
