@@ -7,6 +7,7 @@ import PerfilPage from '../pages/perfilpage/PerfilPage';
 import EditAddress from '../pages/editAddress/EditAddress';
 import EditProfile from '../pages/editProfile/EditProfile';
 import CartPage from '../pages/cartPage/CartPage';
+import RestaurantPage from '../pages/restaurant/restaurant';
 
 export default function RouterPage() {
  return (
@@ -19,6 +20,7 @@ export default function RouterPage() {
       <Route path="/EditAddress" element={<EditAddress/>}/>
       <Route path="/EditProfile" element={<EditProfile/>}/>
       <Route path="/Cart" element={<CartPage/>}/>
+      <Route path="/Restaurant" element={<RestaurantPage/>}/>
     </Routes>
   </BrowserRouter>
  );
