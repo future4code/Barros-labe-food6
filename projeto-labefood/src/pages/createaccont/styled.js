@@ -8,6 +8,24 @@ padding: 0 0 10px;
 box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.25);
 background-color: #fff;
 `
+
+export const ButtonHeader = styled.button`
+width: 25px;
+height: 25px;
+margin: 10px 321px 0 16px;
+object-fit: contain;
+background-color: transparent;
+border: 0;
+img{
+width: 24px;
+height: 24px;
+margin: -6px;
+}
+&:hover{
+    cursor: pointer;
+}
+`
+
 export const Container = styled.div`
 width: 360px;
 height: 640px;
@@ -54,16 +72,6 @@ button{
 }
 `
 
-export const ImageIcon = styled.img`
-width: 23px;
-height: 24px;
-margin: 10px 321px 0 16px;
-object-fit: contain;
-&:hover{
-    cursor: pointer;
-}
-
-`
 export const Subtitle = styled.span`
 width: 5px;
 height: 8px;
