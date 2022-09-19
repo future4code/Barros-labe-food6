@@ -7,6 +7,7 @@ margin: 0 0 16px;
 padding: 0 0 10px;
 box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.25);
 background-color: #fff;
+margin-left: 5vw;
 `
 
 export const ButtonHeader = styled.button`
@@ -26,10 +27,19 @@ margin: -6px;
 }
 `
 
+export const ContainerPrinc = styled.div`
+display: flex;
+justify-items: center;
+align-items: center;
+margin-left: 5vw;
+`
+
 export const Container = styled.div`
 width: 360px;
 height: 640px;
 padding: 0 0 0px;
+
+
 
 `
 export const Title = styled.div`

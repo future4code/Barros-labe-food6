@@ -32,7 +32,7 @@ export const MyAddress = () => {
         
     <Subtitle>Número*</Subtitle>
     <Input
-    name="NÚmero"
+    name="Número"
     type="Number"
     value={form.number}
     onChange={onChange}

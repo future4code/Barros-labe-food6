@@ -60,7 +60,7 @@ export default function LoginPage() {
         </InputCamp>
         <ButtonCamp>
           <button type='submit' colorScheme="teal" variant="ghost">Acessar</button>
-          <p>Não possui cadastro? <a onClick={()=>{navigate("/CreateUsers")}}>Clique aqui.</a></p>
+          <p>Não possui cadastro? <a onClick={()=>{navigate("/CreateAccount")}}>Clique aqui.</a></p>
         </ButtonCamp>
       </LoginCamp>
       </ContainerLogin>
