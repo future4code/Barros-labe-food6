@@ -8,7 +8,14 @@ import {
     Subtitle, 
     ImageLogo, 
     ButtonHeader, 
-    ContainerPrinc 
+    ContainerPrinc, 
+    ContainerBase,
+    ContainerLogin,
+    TittleLogin,
+    InputCamp,
+    ButtonCamp,
+    LoginCamp,
+    ContainerCadastro
 } from "./styled";
 import rappi4 from "../../img/rappi4.jpeg"
 import icon from "../../img/icon.png"
@@ -20,6 +27,7 @@ import {
     InputRightElement
   } from '@chakra-ui/react'
   import { FaEyeSlash,FaEye } from "react-icons/fa";
+  import ImgLogo from '../../imgs/logo.png'
 
 export const CreateAccount = () => {
     const navigate = useNavigate
@@ -34,47 +42,97 @@ export const CreateAccount = () => {
         setShowConfirm(!showConfirm);
     }
 
+    const [isName, setIsName] = useState(true)
+
+    const onSubmit = () =>{
+        setIsName(/"[a-z\s]+$"/.test(form.name))
+    }
+
    return(
     <>
-    <Header>
+
+    <ContainerBase>
+
+      <ContainerCadastro>
+
+      <Header>
         <ButtonHeader onClick={ ()=> goToLogin(navigate) }>
         <img src={icon}></img>
         </ButtonHeader>
     </Header>
+
+      <LoginCamp>
+        <TittleLogin>
+          <img src={ImgLogo}/>
+          <span>Cadastrar</span>
+        </TittleLogin>
+
+        <form onSubmit={onSubmit}>
         
-    <ContainerPrinc>
-    <Container>
-        <ImageLogo src={rappi4}></ImageLogo>
-        <Title>
-    <Text>Cadastrar</Text>
-        </Title>
+            <InputCamp>
+                <div>
+                    <label>Nome*</label>
+                        <input 
+                            placeholder='Bruna Oliveira'
+                            name='name'
+                            type='text'
+                            value={form.name}
+                            onChange={onChange}  
+                            required
+                        />
 
- <form onSubmit="">
-    <Subtitle>Nome*</Subtitle>
-    <Input 
-    name="name"
-    type="text"
-    value={form.name}
-    onChange={onChange}
-    placeholder="Nome"></Input>
-    
-    <Subtitle>E-mail*</Subtitle>
-    <Input
-     name="email"
-     type="email"
-     value={form.email}
-     onChange={onChange}
-     placeholder="E-mail"></Input>
-    
-    <Subtitle>CPF*</Subtitle>
-    <Input 
-    name="cpf"
-    type="text"
-    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-    value={form.cpf}
-    onChange={onChange}
-    placeholder="000.000.000-00"></Input>
+                    <label>Email*</label>
+                        <input 
+                            placeholder='email@email.com'
+                            pattern="/[a-zA-Z0-9]+@[a-z]{3}[.a-z]?/"
+                            name='email'
+                            type='email'
+                            value={form.email}
+                            onChange={onChange}  
+                        />
 
+                    <label>CPF*</label>
+                        <input 
+                            placeholder='333.333.333-33'
+                            name='cpf'
+                            type='text'
+                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                            value={form.cpf}
+                            onChange={onChange}  
+                        />
+
+                    <label>Senha*</label>
+                        <input
+                            placeholder='Mínimo 6 caracteres'
+                            name='password'
+                            type='password'
+                            value={form.password}
+                            onChange={onChange}  
+                        ></input>
+
+                    <label>Confirmar*</label>
+                        <input
+                            placeholder='Mínimo 6 caracteres'
+                            name='password'
+                            type='password'
+                            value={form.password}
+                            onChange={onChange}  
+                        ></input>
+
+                </div>
+            </InputCamp>
+        
+        <ButtonCamp>
+          <button type='submit' colorScheme="teal" variant="ghost" onClick={() => (navigate)}>Criar</button>
+        </ButtonCamp>
+        </form>
+      </LoginCamp>
+      </ContainerCadastro>
+    </ContainerBase>
+
+
+     {/*    
+ 
     <Subtitle>Senha*</Subtitle>
     <InputGroup size='md'>
     <Input 
@@ -120,6 +178,7 @@ export const CreateAccount = () => {
     </form>
     </Container>
 </ContainerPrinc>
+*/}
     </>
    )
 }
