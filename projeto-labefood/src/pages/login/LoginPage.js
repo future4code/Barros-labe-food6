@@ -9,6 +9,7 @@ import ImgLogo from '../../imgs/logo.png'
 export default function LoginPage() {
 
   const navigate = useNavigate()
+
   const [ form, onChange ] = useForm({email:"", password:""})
 
   const sendLogin = (ev)=>{
@@ -18,10 +19,11 @@ export default function LoginPage() {
       .then((resp)=>{
         const hasAddress = (resp.data.user.hasAddress)
         if (hasAddress === true) {
-          navigate("/HomePage")
           localStorage.setItem("token", resp.data.token)
+          navigate("/HomePage")
         }else{
-          navigate("/CreateAddress")
+          localStorage.setItem("token", resp.data.token)
+          navigate("/EditAddress")
         }
 
       })
