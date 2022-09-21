@@ -84,7 +84,7 @@ export const CreateAccount = () => {
                     <label>Email*</label>
                         <input 
                             placeholder='email@email.com'
-                            pattern="/[a-zA-Z0-9]+@[a-z]{3}[.a-z]?/"
+                            pattern="/[a-zA-Z0-9]+@[a-z]+[.a-z]?/"
                             name='email'
                             type='email'
                             value={form.email}

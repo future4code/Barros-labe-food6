@@ -51,13 +51,15 @@ export const Text = styled.h1`
 `
 
 export const Button = styled.div`
+margin-top: 2em;
 width: 296px;
 height: 18px;
 font-family: Roboto;
 font-size: 16px;
+font-weight: bold;
 letter-spacing: -0.39px;
 text-align: center;
-color: #000;
+color: white;
 transition: 0.5s;
 &:hover{
     transform: scale(1.05);
@@ -90,5 +92,15 @@ margin: 4px;
 font-family: Roboto;
 font-size: 16px;
 letter-spacing: -0.39px;
-color: grey
+color: grey;
+`
+
+export const ContainerBase= styled.div`
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1em 1em 3em black;
 `
