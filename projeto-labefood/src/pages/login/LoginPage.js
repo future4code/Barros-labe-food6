@@ -42,6 +42,7 @@ export default function LoginPage() {
           <div>
             <label>Email*</label>
             <input 
+              autoFocus
               placeholder='email@email.com'
               name='email'
               type='email'

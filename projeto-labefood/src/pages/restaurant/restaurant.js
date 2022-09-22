@@ -1,10 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { BASE_URL } from '../../constants/url';
-import { ContainerBase, ContainerRestaurant, EachProducts, InfoRestaurant, MainRestaurant, Products, TittleRestaurant } from './style';
+import { ContainerBase, ContainerRestaurant, ContainerSpace, InfoRestaurant, MainRestaurant, ModalCamp, ModalContainer, ModalSide, Products, ProductsCamp, TittleRestaurant } from './style';
 import ImgBack from '../../imgs/back.png'
 import { useNavigate } from 'react-router-dom';
 import {goToHomePage} from '../../routes/cordinator'
+import EachProducts from '../../components/restaurantProducts/restaurantProducts';
 
 export default function RestaurantPage() {
     const navigate = useNavigate()
@@ -21,18 +22,43 @@ export default function RestaurantPage() {
             .get(`${BASE_URL}restaurants/${localStorage.getItem("idRest")}`, myHeader)
             .then((resp)=>{
                 setRestDetail([resp.data.restaurant])
-                console.log([resp.data.restaurant]);
             })
             .catch((err)=>{console.log(err)})
         },[])
 
+    const backHome = ()=>{
+        document.getElementById("Modal").style.display = "none"
+    }
+    
+    const addCart = ()=>{
+        alert(localStorage.getItem("idProduct"))
+    }
+
  return (
    <ContainerBase>
+    <ModalCamp id='Modal'>
+        <ModalSide onClick={backHome}/>
+        <ModalContainer>
+            <h2>Selecione a quantidade desejada</h2>
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        
+                <button onClick={addCart}>Adicionar no Carrinho</button>
+            
+        </ModalContainer>
+        <ModalSide onClick={backHome}/>
+    </ModalCamp>
     <ContainerRestaurant>
         <TittleRestaurant>
             <img onClick={()=>{goToHomePage(navigate)}} src={ImgBack}/>
             <h2> Restaurante</h2>
         </TittleRestaurant>
+        <ContainerSpace>
         <MainRestaurant>
             {restDetail.map((product, i)=>{
                 return(
@@ -48,29 +74,16 @@ export default function RestaurantPage() {
                         <span>{product.address}</span>
 
                         </InfoRestaurant>
-                            <h3>Produtos</h3>
-                        <Products>
-                            {product.products.map((product)=>{
-                                console.log(product);
-                                return(
-                                    <EachProducts>
-                                        <div>
-                                            <img src={product.photoUrl}/>
-                                        </div>
-                                        <main>
-                                            <span>{product.name}</span>
-                                            <p>{product.description}</p>
-                                            <label>R$ {product.price.toFixed(2)}</label>
-                                            <button>Adicionar</button>
-                                        </main>
-                                    </EachProducts>
-                                )
-                            })}    
-                        </Products>
+                        <ProductsCamp>
+                            <EachProducts
+                                products = {product}
+                            />
+                        </ProductsCamp>
                     </>
                 )
             })}
         </MainRestaurant>
+        </ContainerSpace>
     </ContainerRestaurant>
    </ContainerBase>
  );
