@@ -1,6 +1,9 @@
 
-export const goToLogin = (navigate) => {
+export const goToInitialPage = (navigate) => {
     navigate("/")
+}
+export const goToLogin = (navigate) => {
+    navigate("/Login")
 }
 export const goToCreaAccount = (navigate) => {
     navigate("/CreateAccount")
