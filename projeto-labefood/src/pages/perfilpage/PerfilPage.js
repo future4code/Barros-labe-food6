@@ -5,7 +5,7 @@ import { ButtonHeader, Container, ContainerBase, Header } from './style';
 import React, { useState } from "react";
 import useRequestData from '../../hooks/useRequestData';
 import { BASE_URL } from '../../constants/url';
-import Navegacao from '../../components/Navegação';
+import Navegacao from '../../components/navBar/Navegação';
 
 export default function PerfilPage() {
 

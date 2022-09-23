@@ -8,21 +8,33 @@ export const ContainerBase = styled.div`
     align-items: center;
 `;
 
+export const ContainerSpace = styled.div`
+    width: 328px;
+    height: 100%;
+`
+
 export const ContainerRestaurant = styled.div`
     width: 375px;
     height: 667px;
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 `;
 
 export const TittleRestaurant = styled.div`
     width: 100%;
     height: 64px;
-    background: grey;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    img{
+    h2{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    img{                                   // img do button back
         width: 40px;
         height: 40px;
         position: absolute;
@@ -33,96 +45,96 @@ export const TittleRestaurant = styled.div`
 export const MainRestaurant = styled.div`
     width: 100%;
     height: 603px;
-    background: yellow;
     display: flex;
     flex-direction: column;
     align-items: center;
     img{
         width: 328px;
-        height: 120px;
+        height: 20%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
     }
+    
 `
 
 export const InfoRestaurant = styled.div`
     width: 100%;
-    height: 152px;
+    height: 25%;
     display: flex;
     flex-direction: column;
-    position: relative;
-    bottom: 10px;
+    margin-top: 10px;
     div{
         font-size: 16px;
         display: flex;
         align-items: center;
         p{
             margin-left: 70px;
+            color: #b8b8b8;
         }
     }
     span{
-        position: relative;
-        left: 25px;
         font-size: 16px;
+        color: #b8b8b8;
     }
     h3{
-        color: crimson;
-        position: relative;
-        left: 25px;
+        color: #e86e5a;
         font-size: 16px;
     }
 `
 
-export const Products = styled.div`
+export const ProductsCamp = styled.div`
     width: 100%;
-    height: 100%;
-    margin-left:35px;
+    height: 55%;
     overflow-y: auto;
-    h3{
-        margin-left: 16px;
-        ::after{
-            content: "";
-            width: 328px;
-            height: 2px;
-            background: black;
-            display: flex;
-        }
-    }
 ` 
 
-export const EachProducts = styled.div`
-    width: 328px;
-    height: 112px;
-    border: 2px solid black;
-    margin: 5px 0;
+export const ModalCamp = styled.div`
+    width: 376px;
+    height: 667px;
+    background: black;
+    position: absolute;
+    background: rgba(1,1,1,0.5);
     display: flex;
-    position: relative;
-    border-radius: 8px;
-    div{
-        width: 30%;
-        img{
-            width: 100%;
-            height: 112px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    display: none;
+`;
+
+export const ModalContainer = styled.div`
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    h2{
+        margin: 30px 0;
+        font-size: 16px;
+    }
+    select{
+        border: 1px solid black;
+        border-radius: 4px;
+        width: 296px;
+        height: 56px;
+        option{
+          
         }
     }
-    main{
+    button{
+        margin: 30px 0;
+        font-size: 16px;
+        color: #4a90e2;
+        text-transform: uppercase;
         position: relative;
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-        left: 16px;
-        p{
-            font-size: 14px;
-        }
-        button{
-            width: 90px;
-            height: 31px;
-            background: none;
-            position: absolute;
-            bottom: 0;
-            right: 15px;
-            border-bottom-right-radius:8px;
-            border-top-left-radius:8px;
-        }
+        top: 20px;
+        left: 50px;
     }
+`
+
+export const ModalSide = styled.div`
+    width: 100%;
+    height: 30%;
 `
