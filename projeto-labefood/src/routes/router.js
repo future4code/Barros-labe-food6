@@ -6,9 +6,10 @@ import PerfilPage from '../pages/perfilpage/PerfilPage';
 import EditProfile from '../pages/editProfile/EditProfile';
 import CartPage from '../pages/cartPage/CartPage';
 import RestaurantPage from '../pages/restaurant/restaurant';
-import { CreateAccount } from '../pages/createaccount';
-import { MyAddress } from '../pages/myaddress';
+import { CreateAccount } from '../pages/createaccount/CreateAccount';
+import { MyAddress } from '../pages/myaddress/MyAddress';
 import { InitialPage } from '../pages/initialPage/initialPage';
+
 
 export default function RouterPage() {
  return (
