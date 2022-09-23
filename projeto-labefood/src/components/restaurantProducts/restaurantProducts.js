@@ -4,13 +4,8 @@ import { BASE_URL } from '../../constants/url';
 import { ContainerProduct, Products, TittleProducts } from './style';
 import Swal from 'sweetalert2';
 
-export default function EachProducts(props) {
-    // console.log(props.products.products);      
-//  console.log(props.products.products.filter((prod)=>{
-//     return prod.category === "Lanche"
-//  }));
+export default function EachProducts() {
 
-const [quantity, setQuantity] = useState("1")
 const [restaurant, setRestaurant] = useState({})
 const [categories, setCategories] = useState([])
 
@@ -52,7 +47,7 @@ const myHeader = {
           return(
             <div key={i}>
                 <TittleProducts>
-                    {category}
+                    <h3>{category}</h3>
                 </TittleProducts>             
                 {   
                     restaurant.products
@@ -69,7 +64,7 @@ const myHeader = {
                                         <main>
                                             <h3>{prod.name}</h3>
                                             <p>{prod.description}</p>
-                                            <span>{prod.price}</span>
+                                            <span>R$ {prod.price.toFixed(2)}</span>
                                             <button onClick={()=>{addCart(prod.id)}}>adicionar</button>
                                         </main>
                                     </Products>

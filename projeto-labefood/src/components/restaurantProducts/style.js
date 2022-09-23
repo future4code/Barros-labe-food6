@@ -6,12 +6,13 @@ export const ContainerProduct = styled.div`
 
 export const TittleProducts = styled.div`
     width: 100%;
+    font-weight: bold;
     h3{
         ::after{
             content:"";
             width: 100%;
             height: 2px;
-            background: yellow;
+            background: black;
             display: flex;
         }
        
@@ -22,8 +23,8 @@ export const Products = styled.div`
     width: 100%;
     width: 328px;
     height: 112px;
-    border: 2px solid black;
-    margin: 5px 0;
+    border: 1px solid #b8b8b8;
+    margin: 10px 0;
     display: flex;
     position: relative;
     border-radius: 8px;
@@ -54,6 +55,7 @@ export const Products = styled.div`
             right: 15px;
             border-bottom-right-radius:8px;
             border-top-left-radius:8px;
+            border: 1px solid black;
         }
     }
 `

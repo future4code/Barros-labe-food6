@@ -11,7 +11,6 @@ export const ContainerBase = styled.div`
 export const ContainerSpace = styled.div`
     width: 328px;
     height: 100%;
-    border: 1px solid black;
 `
 
 export const ContainerRestaurant = styled.div`
@@ -31,6 +30,10 @@ export const TittleRestaurant = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
+    h2{
+        font-size: 16px;
+        font-weight: bold;
+    }
     img{                                   // img do button back
         width: 40px;
         height: 40px;

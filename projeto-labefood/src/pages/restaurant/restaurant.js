@@ -9,7 +9,7 @@ import EachProducts from '../../components/restaurantProducts/restaurantProducts
 
 export default function RestaurantPage() {
     const navigate = useNavigate()
-
+    const [quantity, setQuantity] = useState("")
     const [ restDetail, setRestDetail ] = useState([])
     const myHeader = {
         headers:{
@@ -31,7 +31,8 @@ export default function RestaurantPage() {
     }
     
     const addCart = ()=>{
-        alert(localStorage.getItem("idProduct"))
+        alert(`${localStorage.getItem("idProduct")}------ qtd: ${quantity}`)
+        document.getElementById("Modal").style.display = "none"
     }
 
  return (
@@ -40,7 +41,10 @@ export default function RestaurantPage() {
         <ModalSide onClick={backHome}/>
         <ModalContainer>
             <h2>Selecione a quantidade desejada</h2>
-            <select>
+            <select 
+                value={quantity}
+                onChange={(ev)=>{setQuantity(ev.target.value)}}
+            >
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
