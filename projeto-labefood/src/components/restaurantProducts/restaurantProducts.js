@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { BASE_URL } from '../../constants/url';
 import { ContainerProduct, Products, TittleProducts } from './style';
-import Swal from 'sweetalert2';
+
 
 export default function EachProducts() {
 
