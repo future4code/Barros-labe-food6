@@ -9,7 +9,7 @@ import EachProducts from '../../components/restaurantProducts/restaurantProducts
 
 export default function RestaurantPage() {
     const navigate = useNavigate()
-    const [quantity, setQuantity] = useState("")
+    const [ quantity, setQuantity ] = useState("")
     const [ restDetail, setRestDetail ] = useState([])
     const myHeader = {
         headers:{
@@ -73,7 +73,7 @@ export default function RestaurantPage() {
                         <span>{product.category}</span>
                         <div>
                             <span>{product.deliveryTime} min.</span>
-                            <p>Frete: R$ 6,00</p>
+                            <p>Frete: R$ {product.shipping.toFixed(2)}</p>
                         </div>
                         <span>{product.address}</span>
 

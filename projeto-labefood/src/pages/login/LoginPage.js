@@ -1,14 +1,16 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import useForm from '../../hooks/useForm.js'
 import { BASE_URL } from '../../constants/url'
 import { useNavigate } from 'react-router-dom';
 import { ContainerBase, ContainerLogin, LoginCamp, TittleLogin, InputCamp, ButtonCamp } from './style.js';
 import ImgLogo from '../../imgs/logo.png'
+import ImgHiddenPass from '../../img/senha.png'
 
 export default function LoginPage() {
 
   const navigate = useNavigate()
+  const [ showPass, setShowPass ] = useState(false)
   const [ form, onChange ] = useForm({email:"", password:""})
 
   const sendLogin = (ev)=>{
@@ -29,6 +31,12 @@ export default function LoginPage() {
         alert(err.response.data.message)
       })
   }
+
+  const hiddenPass = ()=>{
+    showPass === true ? setShowPass(false) : setShowPass( true)
+  }
+
+
 
   return(
     <ContainerBase>
@@ -53,10 +61,11 @@ export default function LoginPage() {
             <input
               placeholder='Mínimo 6 caracteres'
               name='password'
-              type='password'
+              type={ showPass ? 'text' : 'password'}
               value={form.password}
               onChange={onChange}  
-            ></input>
+              />
+              <p>< img id='troca' onClick={hiddenPass} src={ImgHiddenPass}/></p>
           </div>
         </InputCamp>
         <ButtonCamp>

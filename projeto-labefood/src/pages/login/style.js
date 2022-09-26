@@ -63,6 +63,15 @@ export const InputCamp = styled.div`
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
+        p{
+            position: relative;
+            left: 135px;
+            bottom: 48px;
+            img{
+                width: 24px;
+                height: 24px;
+            }
+        }
         input{
             width: 328px;
             height: 56px;
