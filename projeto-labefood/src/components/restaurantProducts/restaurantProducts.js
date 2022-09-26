@@ -2,23 +2,25 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { BASE_URL } from '../../constants/url';
 import { ContainerProduct, Products, TittleProducts } from './style';
-import Swal from 'sweetalert2';
+import useRequestData from '../../hooks/useRequestData'
+import Loading from '../../components/loading/loading'
 
 export default function EachProducts() {
+    const myHeader = {
+        headers:{
+            auth:localStorage.getItem("token")
+        }
+    }    
 
 const [restaurant, setRestaurant] = useState({})
 const [categories, setCategories] = useState([])
+const [ data, error, isLoading ] = useRequestData(`${BASE_URL}restaurants/${localStorage.getItem("idRest")}`, myHeader)
 
-const myHeader = {
-    headers:{
-        auth:localStorage.getItem("token")
-    }
-}    
     const getRest = ()=>{
         axios
             .get(`${BASE_URL}restaurants/${localStorage.getItem("idRest")}`, myHeader)
             .then((resp)=>{setRestaurant(resp.data.restaurant)})
-            .catch((err)=>{console.log(err);})
+            .catch((err)=>{console.log(err)})
 }
     useEffect(()=>{
         getRest()
@@ -40,15 +42,13 @@ const myHeader = {
       document.getElementById("Modal").style.display = "flex"
     localStorage.setItem("idProduct", id)
     }
-    
- return (
-    <div>
-        {restaurant.products && categories.map((category, i) => {  // LOGICA PARA EXIBIR NOMES DAS CATEGORIAS
-          return(
-            <div key={i}>
-                <TittleProducts>
+
+  const showRest = restaurant.products && categories.map((category, i) =>{
+    return(
+        <div key={i}>
+            <TittleProducts>
                     <h3>{category}</h3>
-                </TittleProducts>             
+                </TittleProducts>
                 {   
                     restaurant.products
                         .filter((prod)=>{
@@ -71,42 +71,16 @@ const myHeader = {
                                 </ContainerProduct>
                             )
                         })
-                }
-            </div>
-          )
-            
-          
-        })
-        
+                }  
+        </div>
+    )
+  })
+               
 
-
-
-
-
-
-
-
-
-            // restaurant.products && categories.map((category)=>{
-            //     restaurant.products.filter((product)=>{
-            //         return product.category === category
-            //     }).map((prod)=>{
-            //         <ContainerProduct>
-            //             <Products>
-            //                 <div>
-            //                     <img src={prod.photoUrl}/>
-            //                 </div>
-            //                 <main>
-            //                     <h3>{prod.name}</h3>
-            //                     <p>{prod.description}</p>
-            //                     <span>{prod.price}</span>
-            //                     <button>adicionar</button>
-            //                 </main>
-            //             </Products>
-            //         </ContainerProduct>
-            //     })
-            // })
-        }
-    </div>
- )
+    return (
+        <>
+            {isLoading && <Loading/>}
+            {!isLoading && showRest}
+        </>
+    )
 }

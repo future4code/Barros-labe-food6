@@ -73,7 +73,7 @@ export default function RestaurantPage() {
                         <span>{product.category}</span>
                         <div>
                             <span>{product.deliveryTime} min.</span>
-                            <p>Frete: R$ 6,00</p>
+                            <p>Entrega: R$ {product.shipping.toFixed(2)}</p>
                         </div>
                         <span>{product.address}</span>
 
