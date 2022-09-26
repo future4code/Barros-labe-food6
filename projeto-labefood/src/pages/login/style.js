@@ -58,6 +58,15 @@ export const InputCamp = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    p{
+        position: relative;
+        left: 130px;
+        bottom: 48px;
+        img{
+            width: 26px;
+            height: 26px;
+        }
+    }
     div{
         display: flex;
         justify-content: space-between;
