@@ -47,7 +47,6 @@ export const Text = styled.h1`
  height: 18px;
  font-family: Roboto solid ;
  font-size: 16px;
-
 `
 
 export const Button = styled.div`
