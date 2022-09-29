@@ -1,16 +1,15 @@
 <h1 align="center">
-     Projeto LabeFood
+     Projeto final de Front-End: Rappi4
 </h1>
 
-<h4 align="left">
-    Slogan do Projeto. Fazer um texto curto sobre o que é o projeto.
-</h4>
+![rappi4-](https://user-images.githubusercontent.com/102266417/193159218-15d9a6da-7b21-4c92-a253-6b632c1c5bd2.png)
+
 
 ---
 
 ##  🕵Sobre
 
-Escrever de forma sucinta sobre o que é o seu projeto. Por exemplo, se você está fazendo uma Pokedéx pode escrever : Aplicação com intuito de criar uma pokedéx, site onde você pode ver os detalhes dos pokemóns e montar a sua equipe.
+Rappi4 é uma aplicação para mobile inspirada no aplicativo Rappi, uma plataforma de entrega de pedidos de comida, que conecta restaurantes e consumidores.
 
 ---
 
@@ -31,17 +30,13 @@ Escrever de forma sucinta sobre o que é o seu projeto. Por exemplo, se você es
    * [Quem Fez](#quem-fez)
    * [Status](#status)
    * [Objetivo do Projeto](#objetivo-do-projeto)
-   * [Requisitos de Funcionalidade](#requisitos-de-funcionalidade)
    * [Link para Acessar](#link-para-acessar)
    * [Rodando o Projeto](#rodando-o-projeto)
-   * [Sobre a Licença](#sobre-a-licença)
 <!--te-->
 
 
 ---
 ##  🧭Status do Projeto
-
-~~COLOCAR AQUI O STATUS DO PROJETO. ALÉM DISSO, VOCÊ PODE COLOCAR QUAL PARTE VOCÊ ESTÁ DESENVOLVENDO (ESTILIZAÇÃO, RESPONSIVIDADE, ETC...)~~
 
  - ⏳ Fazendo
  - 📥 Testando 
@@ -51,46 +46,31 @@ Escrever de forma sucinta sobre o que é o seu projeto. Por exemplo, se você es
 
 ##  🎯Objetivo do Projeto
 
-Este é um projeto de Front-end, desenvolvido no bootcamp da Labenu, cujo o principal objetivo é estudar e compreender : ~~COLOCAR AQUI QUAIS SÃO OS CONCEITOS  E TECNOLOGIAS QUE VOCÊ ESTAVA FOCADO EM ESTUDAR, AO REALIZAR ESSE PROJETO~~. 
-
-~~EXEMPLO:~~
-
-- Este é um projeto de Back-end , desenvolvido no bootcamp da Labenu, cujo o principal objetivo é estudar e compreender :  Diferença entre banco de dados relacionais e não relacionais ; MySQL ; Criação de Query.
-
-
-
-## ☑️Requisitos de Funcionalidade
-
-- [x] Funcionalidade 1
-- [ ] Funcionalidade 2
-- [ ] Funcionalidade 3
-- [ ] Funcionalidade 4
-
-Além das funcionalidades, aqui você pode por Prints e gifs do seu projeto, como ele funciona.
-
+- Este é um projeto de Front-end, baseado em aplicativos de delivery de comida, desenvolvido no bootcamp da Labenu. Por ser o último projeto do módulo de Front-end o principal objetivo é estudar e compreender todas tecnologias utlizadas nesse módulo, sendo elas: Javascript, HTML, Styled-components e React.
 
 ---
 
 ## 🔗Link para Acessar
 
-- **Link do Surge:** ~~COLOCAR AQUI O LINK DO SURGE~~
+- **Link do Surge:**
 
 ---
 
 
 ## 🛰Rodando o Projeto
 
-~~EXPLICAR AQUI O PASSO A PASSO PARA CONSEGUIR RODAR E ACESSAR O PROJETO.~~
 
-Para Rodar o projeto, siga as seguintes etapas :
+### Clonar o repositório
+ git clone https://github.com/future4code/Barros-labe-food6.git
 
-- COLOCAR A ETAPA 1
-- COLOCAR A ETAPA 2
-- COLOCAR A ETAPA 3
+### Entrar no diretório
+cd projeto-labefood
+
+### Instalar as dependências
+npm install
+
+### Rodar o projeto
+npm run start
 
 
 ---
-
-## 📝Sobre a Licença
-
-Este projeto esta sobe a licença [MIT](./LICENSE).
