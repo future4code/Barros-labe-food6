@@ -12,7 +12,6 @@ export const ContainerBase = styled.div`
 export const Container = styled.div`
     width: 375px;
     height: 667px;
-    display: grid;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -128,16 +127,82 @@ export const ButtonCamp = styled.div`
 `
 
 export const Header = styled.div`
-    width: 360px;
+    width: 374px;
     height: 30px;
     box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.25);
     position: relative;
     top: 0;
-    
-   
+    margin-top: 20px;
+    position: fixed;
+
     p{  
         font-family:'Roboto', sans-serif;
         text-align: center;
+    }
+`
+
+export const DivDados=styled.div`
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    justify-items: start;
+    margin: 0 30px;
+    margin-top: 70px;
+
+    .dados{
+        margin-right: 120px;
+        text-align: left;
+    }
+    .btn{
+        
+        button{
+            img{
+                width: 20px;
+            }
+        }
+    }
+`
+export const DivEndereco=styled.div`
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    justify-items: start;
+    background-color: #eeeeee;
+    margin: 0 30px;
+    margin-top: 20px;
+    
+    .endCadastrado{
+        color: #b8b8b8;
         
     }
+    
+    p{
+        text-align: left;
+        font-size: 16px;
+    }
+`
+export const DivHistorico=styled.div`
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    justify-items: start;
+    margin: 0 30px;
+    margin-top: 20px;
+    box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 1.25);
+`
+
+export const DivCard=styled.div`
+    border-radius: 5px;
+    border: 1px solid #b8b8b8;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    width: 300px;
+    text-align: start;
+
+  .restaurante{
+    color: #e86e5a;
+  }
+  .valor{
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
 `
