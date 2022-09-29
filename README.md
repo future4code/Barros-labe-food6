@@ -16,12 +16,12 @@ Escrever de forma sucinta sobre o que é o seu projeto. Por exemplo, se você es
 
 ##  👩🏾Quem Fez 
 
-- Antônio Braz Seabra Junior
-- Diego Rios Santos
-- Gabriel dos Santos Ribeiro
-- Jéssica Lima
-- José Augusto Pereira Morcelli
-- Marcio Emmanuel
+- <a href=https://github.com/AntonioJuniorPanda>Antônio Braz Seabra Junior</a>
+- <a href=https://github.com/DiegoRiosS-dev>Diego Rios Santos</a>
+- <a href=https://github.com/Gabcentro>Gabriel dos Santos Ribeiro</a>
+- <a href=https://github.com/jessicalimaz>Jéssica Lima</a>
+- <a href=https://github.com/josemorcelli>José Augusto Pereira Morcelli</a>
+- <a href=https://github.com/M-Emmanuel-G>Marcio Emmanuel</a>
 
 ---
 ##  🔠Conteúdos
