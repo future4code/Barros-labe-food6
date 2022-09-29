@@ -2,6 +2,10 @@
      Projeto final de Front-End: Rappi4
 </h1>
 
+<!--ts-->
+   | [Sobre](#sobre) | [Quem Fez](#quem-fez) | [Status](#status) | [Objetivo do Projeto](#objetivo-do-projeto) | [Link para Acessar](#link-para-acessar) | [Rodando o Projeto](#rodando-o-projeto) |
+<!--te-->
+
 ![rappi4-](https://user-images.githubusercontent.com/102266417/193159218-15d9a6da-7b21-4c92-a253-6b632c1c5bd2.png)
 
 
@@ -23,19 +27,7 @@ Rappi4 é uma aplicação para mobile inspirada no aplicativo Rappi, uma platafo
 - <a href=https://github.com/M-Emmanuel-G>Marcio Emmanuel</a>
 
 ---
-##  🔠Conteúdos
 
-<!--ts-->
-   * [Sobre](#sobre)
-   * [Quem Fez](#quem-fez)
-   * [Status](#status)
-   * [Objetivo do Projeto](#objetivo-do-projeto)
-   * [Link para Acessar](#link-para-acessar)
-   * [Rodando o Projeto](#rodando-o-projeto)
-<!--te-->
-
-
----
 ##  🧭Status do Projeto
 
  - ⏳ Fazendo
