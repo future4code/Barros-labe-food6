@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ContainerNavegacao=styled.div`
-    display: flex;
     position: fixed;
     bottom: 0;
     align-items: center;
