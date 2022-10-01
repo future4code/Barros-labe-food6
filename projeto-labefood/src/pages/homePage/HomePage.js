@@ -13,8 +13,8 @@ import Navegacao from '../../components/navBar/Navegação';
 export default function HomePage() {
   const navigate = useNavigate()
 
-  const [ rests, setRests, isLoading ] = useState([])
-
+  const [ rests, setRests ] = useState([])
+  const [ isLoading, setIsloading ] = useState(true)
     useProtect()
     const myHeader = {
         headers:{
@@ -23,8 +23,14 @@ export default function HomePage() {
     }
 
     const listRestaurants = () => {
-      axios.get(`${BASE_URL}restaurants`, myHeader)
-      .then((resp)=>{setRests(resp.data.restaurants)})
+      setIsloading(true)
+      axios.get(`${BASE_URL}restaurants`, myHeader )
+      .then((resp)=>{
+        setRests(resp.data.restaurants)
+        setIsloading(false)
+      }).catch( (resp) => { 
+        alert(resp.message)
+      })
   }
 
     useEffect(() => { listRestaurants()},[])

@@ -14,4 +14,5 @@ export const AnimLoading = styled.div`
     animation: ${animLoading} .5s linear infinite;
     position: absolute;
     right: 165px;
+    margin: 65px 0;
 `
