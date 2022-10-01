@@ -44,7 +44,7 @@ Rappi4 é uma aplicação para mobile inspirada no aplicativo Rappi, uma platafo
 
 ## 🔗Link para Acessar
 
-- **Link do Surge:**
+- **Link do Surge:** https://special-partner.surge.sh/
 
 ---
 
