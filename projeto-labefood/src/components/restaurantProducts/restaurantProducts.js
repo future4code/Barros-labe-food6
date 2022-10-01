@@ -90,12 +90,12 @@ const [ data, error, isLoading ] = useRequestData(`${BASE_URL}restaurants/${loca
                                             <img src={prod.photoUrl}/>
                                         </div>
                                         <main>
-                                            {prod.quantity && <p>{prod.quantity}</p>} 
+                                            {prod.quantity && <div id='quantity'> <span>{prod.quantity}</span></div>} 
                                             <h3>{prod.name}</h3>
                                             <p>{prod.description}</p>
-                                            <span>R$ {prod.price.toFixed(2)}</span>
+                                            <span id='price'>R$ {prod.price.toFixed(2)}</span>
                                             {prod.quantity ? // aqui faz uma verificação se existe a quantidade, e caso exista ele muda o botao para o de remover
-                                                <button onClick={ ()=> {removeCart(prod)}}>remover</button>
+                                                <button id='btnRemove' onClick={ ()=> {removeCart(prod)}}>remover</button>
                                                  : 
                                               <button  onClick={()=>{addCart(prod)}}>adicionar</button>
                                             }

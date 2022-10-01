@@ -60,6 +60,7 @@ export default function RestaurantPage() {
             if(prod.id === produCT.id){ prod["quantity"] = quantity }
         });
         localStorage.setItem("listProducts", JSON.stringify(listProducts));
+        setQuantity("")
     };
     // --- /// -------------------------------------------------- /// ----///
  return (
